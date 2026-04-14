@@ -1,5 +1,5 @@
 {
-    "name": "lmo/laravel-dm8",
+    "name": "i2soft/laravel-dm8",
     "autoload": {
         "psr-4": {
             "Lmo\\LaravelDm8\\": "src/"
