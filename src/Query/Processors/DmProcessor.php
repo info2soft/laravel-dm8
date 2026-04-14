@@ -31,7 +31,7 @@ class DmProcessor extends Processor
         $statement = $this->prepareStatement($query, $sql);
         $values = $this->incrementBySequence($values, $sequence);
         $parameter = $this->bindValues($values, $statement, $parameter);
-        $statement->bindParam($parameter, $id, PDO::PARAM_INT, -1);
+        $statement->bindParam($parameter, $id, PDO::PARAM_INT, 20);
         $statement->execute();
 
         $connection->logQuery($sql, $values, $start);
@@ -161,7 +161,7 @@ class DmProcessor extends Processor
         }
 
         // bind output param for the returning clause.
-        $statement->bindParam($parameter, $id, PDO::PARAM_INT, -1);
+        $statement->bindParam($parameter, $id, PDO::PARAM_INT, 20);
 
         if (! $statement->execute()) {
             return false;
